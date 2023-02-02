@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>The GLMO Ontology</title>
+ </head>
+ <style>
+     body {
+  font-family: sans-serif;
+  color: black;
+  background-color: #f1fcff;
+  padding: 2em 1em 2em 70px;
+}
+h1, h2, h3 {
+  color: #005A9C;
+}
+div.rdf{
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    margin-left: 20px; 
+    margin-right: 20px; 
+    font-family: monospace;
+}
+.caption {
+    font-weight: bold;
+}
+dt {
+    font-weight: bold;
+}
+table.rdf {
+    margin: 0px 0px 0px 0px; 
+    padding: 0px 0px 0px 0px; 
+    width: 100%;
+}
+table.rdf caption.rdf {
+    font-size: 1.5ex;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 10px;
+}
+table.rdf td:first-child {
+    font-family: monospace;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 60%;
+}
+</style>
+<body>
+<div class="head"><h1>The GLMO Ontology</h1>
+    <dl>
+        <dt>IRI:</dt>
+        <dd>https://tm4vetr.github.io/glmo/model</dd>
+        <dt>Version IRI:</dt>
+        <dd>https://tm4vetr.github.io/glmo/model/1.0</dd>
+    </dl>
+    <dl>
+        <dt>Current version:
+        </dt>
+        <dd>1.0</dd>
+    </dl>
+    <dl>
+        <dt>Authors:
+        </dt>
+        <dd>Jens Dörpinghaus (BIBB)</dd>
+        <dd>Johanna Binnewitt (BIBB)</dd>
+        <dt>Contributors:
+        </dt>
+        <dd>Stefan Winnige (BIBB)</dd>
+        <dd>Kai Krüger (BIBB)</dd>
+        <dd>Kristine Hein (BIBB)</dd>
+    </dl>
+    <dl>
+        <dt>Ontology Namespace:
+        </dt>
+        <dd>@prefix glmo: </dd>
+        <dd>@prefix ba: </dd>
+        <dd>@prefix sba: </dd>
+        <dd>@prefix isco: </dd>
+    </dl>
+    <dl>
+        <dt>Imported Ontologies:
+        </dt>
+        <dd><a href="https://ec.europa.eu/esco/lod/static/model.html">https://ec.europa.eu/esco/lod/static/model.html</a></dd>
+        <dd><a href="https://dbpedia.org/ontology/">https://dbpedia.org/ontology/</a></dd>
+        <dd><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></dd>
+        <dd><a href="http://data.europa.eu/esco/flow">http://data.europa.eu/esco/flow</a></dd>
+        <dd><a href="http://www.w3.org/2008/05/skos-xl">http://www.w3.org/2008/05/skos-xl</a></dd>
+        <dd><a href="http://data.europa.eu/esco/skos2">http://data.europa.eu/esco/skos2</a></dd>
+        <dd><a href="http://purl.org/iso25964/skos-thes">http://purl.org/iso25964/skos-thes</a></dd>
+        <dd><a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a></dd>
+    </dl>
+</div>
+<hr/>
+<p>GLMO is our first step towards a generic German labor market ontology. GLMO explicitly represents both ISCO and KldB to provide a generic framework for further data integration and mapping. For this, GLMO is implemented as an extension of ESCO and Simple Knowledge Organisation System (SKOS). However, the key difference is a different scope and that we explicitly provide the mappings in one standardized format and provide further mappings and data, which are yet not available. 
+<p>While ESCO describes three different domains (occupations; knowledge, skills and competences; qualifications), GLMO describes i) occupations, ii) skills, iii) tools and iv) industrial sectors. A fifth domain is added implicitly, the level of performance, which refers to both qualification and skill requirements for an occupation. </p>
+<img src="schema.png" style="width:40%;min-width:400px;display: block; margin-left: auto;
+  margin-right: auto;" class="center">
+<hr/>
+
+<div id="toc"><h2>Table of Content</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#dataproperties">Data Properties</a></li>
+        <li><a href="#namedindividuals">Named Individuals</a></li>
+        <li><a href="#annotationproperties">Annotation Properties</a></li>
+        <li><a href="#namespacedeclarations">Namespace Declarations</a></li>
+    </ol>
+</div>
+<hr/>
+
+<div id="classes"><h2>Classes</h2>
+
+<a name="Occupation">
+<h3>[isco/ba:]Occupation</h3>
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> skos:Concept</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td> --</td></tr> 
+<tr><td class="rowheader">In domain of: </td><td>  <a href="#needsSkill">dbpedia:hasPart</a>,  <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
+<tr><td class="rowheader">In range of: </td><td>  <a href="#hasCapability">dbpedia:conformsTo</a></td></tr> 
+<tr><td>Description </td><td> This class represents an occupation. </td></tr> 
+</table>
+
+<a name="Skill">
+<h3>ba:Skill</h3>
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> skos:Concept</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td> --</td></tr> 
+<tr><td class="rowheader">In domain of: </td><td>  <a href="#requiresQualification">esco:isEssentialSkillForl</a>,  <a href="#requiresQualification">esco:isOptionalSKillFor</a> </td></tr> 
+<tr><td class="rowheader">In range of: </td><td>   <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
+<tr><td>Description </td><td> This class represents a Skill. </td></tr> 
+</table>
+
+<a name="Tool">
+<h3>Tool</h3>
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> skos:Concept</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td> --</td></tr> 
+<tr><td class="rowheader">In domain of: </td><td>  <a href="#requiresQualification">dbped:isPartOf</a></td></tr> 
+<tr><td class="rowheader">In range of: </td><td>    <a href="#requiresQualification">dbped:hasPart</a></td></tr> 
+<tr><td>Description </td><td> This class represents a tool. </td></tr> 
+</table>
+
+<a name="IndustrialSector">
+<h3>sba:IndustrialSector</h3>
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> skos:Concept</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td> --</td></tr> 
+<tr><td class="rowheader">In domain of: </td><td>  --</td></tr> 
+<tr><td class="rowheader">In range of: </td><td>    --</td></tr> 
+<tr><td>Description </td><td> This class represents an industrial sector. </td></tr> 
+</table>
+
+
+
+</div> <!--Classes -->
+
+
+
+Ontology Properties Description
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
