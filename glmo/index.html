@@ -48,9 +48,9 @@ table.rdf td:first-child {
 <div class="head"><h1>The GLMO Ontology</h1>
     <dl>
         <dt>IRI:</dt>
-        <dd>https://tm4vetr.github.io/glmo/model</dd>
+        <dd>http://w3id.org/glmo</dd>
         <dt>Version IRI:</dt>
-        <dd>https://tm4vetr.github.io/glmo/model/1.0</dd>
+        <dd>http://w3id.org/glmo/1.0</dd>
     </dl>
     <dl>
         <dt>Current version:
@@ -72,9 +72,6 @@ table.rdf td:first-child {
         <dt>Ontology Namespace:
         </dt>
         <dd>@prefix glmo: http://w3id.org/glmo#</dd>
-        <dd>@prefix ba: http://w3id.org/glmo#</dd>
-        <dd>@prefix sba: http://w3id.org/glmo#</dd>
-        <dd>@prefix isco: http://w3id.org/glmo#</dd>
     </dl>
     <dl>
         <dt>Imported Ontologies:
@@ -111,27 +108,69 @@ table.rdf td:first-child {
 <div id="classes"><h2>Classes</h2>
 
 <a name="Occupation">
-<h3>[isco/ba:]Occupation</h3>
+<h3>glmo:Occupation</h3>
 <table class="ontdoctable"> 
 <tr><td class="rowheader">Superclasses </td><td> skos:Concept</td></tr> 
-<tr><td class="rowheader">Subclasses </td><td> --</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td> <a href="#ISCO">glmo:ISCO</a>, <a href="#KldB2010">glmo:KldB2010</a>, <a href="#KldB1992">glmo:KldB1992</a></td></tr> 
 <tr><td class="rowheader">In domain of: </td><td>  <a href="#needsSkill">dbpedia:hasPart</a>,  <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
 <tr><td class="rowheader">In range of: </td><td>  <a href="#hasCapability">dbpedia:conformsTo</a></td></tr> 
 <tr><td>Description </td><td> This class represents an occupation. </td></tr> 
 </table>
 
+<a name="ISCO">
+<h3>glmo:ISCO</h3>
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> <a href="#Occupation">glmo:Occupation</a></td></tr> 
+<tr><td class="rowheader">Subclasses </td><td> -- </td></tr> 
+<tr><td class="rowheader">In domain of: </td><td>  <a href="#needsSkill">dbpedia:hasPart</a>,  <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
+<tr><td class="rowheader">In range of: </td><td>  <a href="#hasCapability">dbpedia:conformsTo</a></td></tr> 
+<tr><td>Description </td><td> This class represents an ISCO occupation. </td></tr> 
+</table>
+
+
+<a name="KldB2010">
+<h3>glmo:KldB2010</h3>
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> <a href="#Occupation">glmo:Occupation</a></td></tr> 
+<tr><td class="rowheader">Subclasses </td><td> -- </td></tr> 
+<tr><td class="rowheader">In domain of: </td><td>  <a href="#needsSkill">dbpedia:hasPart</a>,  <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
+<tr><td class="rowheader">In range of: </td><td>  <a href="#hasCapability">dbpedia:conformsTo</a></td></tr> 
+<tr><td>Description </td><td> This class represents an KldB2010 occupation. </td></tr> 
+</table>
+
+<a name="KldB1992">
+<h3>glmo:KldB1992</h3>
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> <a href="#Occupation">glmo:Occupation</a></td></tr> 
+<tr><td class="rowheader">Subclasses </td><td> -- </td></tr> 
+<tr><td class="rowheader">In domain of: </td><td>  <a href="#needsSkill">dbpedia:hasPart</a>,  <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
+<tr><td class="rowheader">In range of: </td><td>  <a href="#hasCapability">dbpedia:conformsTo</a></td></tr> 
+<tr><td>Description </td><td> This class represents an KldB1992 occupation (currently not used). </td></tr> 
+</table>
+
 <a name="Skill">
-<h3>ba:Skill</h3>
+<h3>glmo:Skill</h3>
 <table class="ontdoctable"> 
 <tr><td class="rowheader">Superclasses </td><td> skos:Concept</td></tr> 
-<tr><td class="rowheader">Subclasses </td><td> --</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td> <a href="#BASkill">glmo:BASkill</a></td></tr> 
 <tr><td class="rowheader">In domain of: </td><td>  <a href="#requiresQualification">esco:isEssentialSkillForl</a>,  <a href="#requiresQualification">esco:isOptionalSKillFor</a> </td></tr> 
 <tr><td class="rowheader">In range of: </td><td>   <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
 <tr><td>Description </td><td> This class represents a Skill. </td></tr> 
 </table>
 
+
+<a name="BASkill">
+<h3>glmo:BASkill</h3>
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> <a href="#BASkill">glmo:Skill</a></td></tr> 
+<tr><td class="rowheader">Subclasses </td><td> -- </td></tr> 
+<tr><td class="rowheader">In domain of: </td><td>  <a href="#requiresQualification">esco:isEssentialSkillForl</a>,  <a href="#requiresQualification">esco:isOptionalSKillFor</a> </td></tr> 
+<tr><td class="rowheader">In range of: </td><td>   <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
+<tr><td>Description </td><td> This class represents a Skill from the BA dataset. </td></tr> 
+</table>
+
 <a name="Tool">
-<h3>Tool</h3>
+<h3>glmo:Tool</h3>
 <table class="ontdoctable"> 
 <tr><td class="rowheader">Superclasses </td><td> skos:Concept</td></tr> 
 <tr><td class="rowheader">Subclasses </td><td> --</td></tr> 
@@ -141,16 +180,24 @@ table.rdf td:first-child {
 </table>
 
 <a name="IndustrialSector">
-<h3>sba:IndustrialSector</h3>
+<h3>glmo:IndustrialSector</h3>
 <table class="ontdoctable"> 
 <tr><td class="rowheader">Superclasses </td><td> skos:Concept</td></tr> 
-<tr><td class="rowheader">Subclasses </td><td> --</td></tr> 
+<tr><td class="rowheader">Subclasses </td><td> <a href="#WZ08">glmo:WZ08</a></td></tr> 
 <tr><td class="rowheader">In domain of: </td><td>  --</td></tr> 
 <tr><td class="rowheader">In range of: </td><td>    --</td></tr> 
 <tr><td>Description </td><td> This class represents an industrial sector. </td></tr> 
 </table>
 
-
+<a name="WZ08">
+<h3>glmo:WZ08</h3>
+<table class="ontdoctable"> 
+<tr><td class="rowheader">Superclasses </td><td> <a href="#IndustrialSector">glmo:IndustrialSector</a></td></tr> 
+<tr><td class="rowheader">Subclasses </td><td>-- </td></tr> 
+<tr><td class="rowheader">In domain of: </td><td>  --</td></tr> 
+<tr><td class="rowheader">In range of: </td><td>    --</td></tr> 
+<tr><td>Description </td><td> This class represents an industrial sector according to WZ08. </td></tr> 
+</table>
 
 </div> <!--Classes -->
 
@@ -159,8 +206,24 @@ table.rdf td:first-child {
 
 This ontology currently does not contain original object properties.
 
+<div id="dataproperties"><h2>Data Properties</h2>
+
+<a name="hasZustand">
+<h3>glmo:hasZustand</h3>
+The data property glmo:hasZustand can be used to associate an occupation with each "Zustand", a term introduced by BA.
 
 
+<div id="namedindividuals"><h2>Named Individuals</h2>
+
+This ontology currently does not contain original Named Individuals.
+
+<div id="annotationproperties"><h2>Annotation Properties</h2>
+
+This ontology currently does not contain original Annotation Properties.
+
+<div id="namespacedeclarations"><h2>Namespace Declarations</h2>
+
+This ontology currently does not contain original Namespace Declarations.
 
 </div> <!--properties -->
 
