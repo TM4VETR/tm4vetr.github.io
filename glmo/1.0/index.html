@@ -50,24 +50,20 @@ table.rdf td:first-child {
         <dt>IRI:</dt>
         <dd>http://w3id.org/glmo</dd>
         <dt>Version IRI:</dt>
-        <dd>http://w3id.org/glmo/1.1</dd>
+        <dd>http://w3id.org/glmo/1.0</dd>
     </dl>
     <dl>
         <dt>Current version:
         </dt>
-        <dd>1.1</dd>
+        <dd>1.0</dd>
     </dl>
     <dl>
         <dt>Authors:
         </dt>
         <dd>Jens Dörpinghaus (BIBB)</dd>
-        <dd>Michael Tiemann (BIBB)</dd>
         <dd>Johanna Binnewitt (BIBB)</dd>
         <dt>Contributors:
         </dt>
-        <dd>Richard Fechner (BIBB, Universität Tübingen)</dd>
-        <dd>Diana Martić (Universität Koblenz)</dd>
-        <dd>Andreas Fischer (Forschungsinstitut Betriebliche Bildung (F-BB))</dd>
         <dd>Stefan Winnige (BIBB)</dd>
         <dd>Kai Krüger (BIBB)</dd>
         <dd>Kristine Hein (BIBB)</dd>
@@ -75,7 +71,7 @@ table.rdf td:first-child {
     <dl>
         <dt>Ontology Namespace:
         </dt>
-        <dd>@prefix glmo: http://w3id.org/glmo#</dd>
+        <dd>@prefix glmo: http://w3id.org/glmo/1.0#</dd>
     </dl>
     <dl>
         <dt>Imported Ontologies:
@@ -93,7 +89,7 @@ table.rdf td:first-child {
 <hr/>
 <p>GLMO is our first step towards a generic German labor market ontology. GLMO explicitly represents both ISCO and KldB to provide a generic framework for further data integration and mapping. For this, GLMO is implemented as an extension of ESCO and Simple Knowledge Organisation System (SKOS). However, the key difference is a different scope and that we explicitly provide the mappings in one standardized format and provide further mappings and data, which are yet not available. 
 <p>While ESCO describes three different domains (occupations; knowledge, skills and competences; qualifications), GLMO describes i) occupations, ii) skills, iii) tools and iv) industrial sectors. A fifth domain is added implicitly, the level of performance, which refers to both qualification and skill requirements for an occupation. </p>
-<img src="schema.png" style="width:60%;min-width:600px;display: block; margin-left: auto;
+<img src="schema.png" style="width:40%;min-width:400px;display: block; margin-left: auto;
   margin-right: auto;" class="center">
 <hr/>
 
@@ -110,81 +106,15 @@ table.rdf td:first-child {
 <hr/>
 
 <div id="classes"><h2>Classes</h2>
-<a name="Qualification">
-<h3>glmo:Qualification</h3>
-<table class="ontdoctable"> 
-<tr><td class="rowheader">Superclasses </td><td> skos:Concept</td></tr> 
-<tr><td class="rowheader">Subclasses </td><td> <a href="#Occupation">glmo:Occupation</a>, <a href="#Education">glmo:Education</a>, <a href="#KldB1992">glmo:KldB1992</a></td></tr> 
-<tr><td class="rowheader">In domain of: </td><td>  <a href="#needsSkill">dbpedia:hasPart</a>,  <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
-<tr><td class="rowheader">In range of: </td><td>  <a href="#hasCapability">dbpedia:conformsTo</a></td></tr> 
-<tr><td>Description </td><td> This class represents a qualification. </td></tr> 
-</table>
 
 <a name="Occupation">
 <h3>glmo:Occupation</h3>
 <table class="ontdoctable"> 
-<tr><td class="rowheader">Superclasses </td><td> glmo:Qualification</td></tr> 
+<tr><td class="rowheader">Superclasses </td><td> skos:Concept</td></tr> 
 <tr><td class="rowheader">Subclasses </td><td> <a href="#ISCO">glmo:ISCO</a>, <a href="#KldB2010">glmo:KldB2010</a>, <a href="#KldB1992">glmo:KldB1992</a></td></tr> 
 <tr><td class="rowheader">In domain of: </td><td>  <a href="#needsSkill">dbpedia:hasPart</a>,  <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
 <tr><td class="rowheader">In range of: </td><td>  <a href="#hasCapability">dbpedia:conformsTo</a></td></tr> 
 <tr><td>Description </td><td> This class represents an occupation. </td></tr> 
-</table>
-
-
-
-<a name="Education">
-<h3>glmo:Education</h3>
-<table class="ontdoctable"> 
-<tr><td class="rowheader">Superclasses </td><td> glmo:Qualification</td></tr> 
-<tr><td class="rowheader">Subclasses </td><td> <a href="#Apprenticeship">glmo:Apprenticeship</a> 
-<a href="#ContinuingEducation">glmo:ContinuingEducation</a>
-<a href="#GeneralEducation">glmo:GeneralEducation</a>
-<a href="#ContinuingVocationalEducation">glmo:ContinuingVocationalEducation</a> </td></tr> 
-<tr><td class="rowheader">In domain of: </td><td>  <a href="#needsSkill">dbpedia:hasPart</a>,  <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
-<tr><td class="rowheader">In range of: </td><td>  <a href="#hasCapability">dbpedia:conformsTo</a></td></tr> 
-<tr><td>Description </td><td> This class represents education. </td></tr> 
-</table>
-
-
-
-<a name="Apprenticeship">
-<h3>glmo:Apprenticeship</h3>
-<table class="ontdoctable"> 
-<tr><td class="rowheader">Superclasses </td><td> glmo:Education</td></tr> 
-<tr><td class="rowheader">Subclasses </td><td> </td></tr> 
-<tr><td class="rowheader">In domain of: </td><td>  <a href="#needsSkill">dbpedia:hasPart</a>,  <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
-<tr><td class="rowheader">In range of: </td><td>  <a href="#hasCapability">dbpedia:conformsTo</a></td></tr> 
-<tr><td>Description </td><td> This class represents Apprenticeship. </td></tr> 
-</table>
-
-<a name="ContinuingEducation">
-<h3>glmo:ContinuingEducation</h3>
-<table class="ontdoctable"> 
-<tr><td class="rowheader">Superclasses </td><td> glmo:Education</td></tr> 
-<tr><td class="rowheader">Subclasses </td><td> </td></tr> 
-<tr><td class="rowheader">In domain of: </td><td>  <a href="#needsSkill">dbpedia:hasPart</a>,  <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
-<tr><td class="rowheader">In range of: </td><td>  <a href="#hasCapability">dbpedia:conformsTo</a></td></tr> 
-<tr><td>Description </td><td> This class represents Continuing Education. </td></tr> 
-</table>
-
-<a name="GeneralEducation">
-<h3>glmo:GeneralEducation</h3>
-<table class="ontdoctable"> 
-<tr><td class="rowheader">Superclasses </td><td> glmo:Education</td></tr> 
-<tr><td class="rowheader">Subclasses </td><td> </td></tr> 
-<tr><td class="rowheader">In domain of: </td><td>  <a href="#needsSkill">dbpedia:hasPart</a>,  <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
-<tr><td class="rowheader">In range of: </td><td>  <a href="#hasCapability">dbpedia:conformsTo</a></td></tr> 
-<tr><td>Description </td><td> This class represents General Education. </td></tr> 
-</table>
-
-<a name="ContinuingVocationalEducation">
-<h3>glmo:ContinuingVocationalEducation</h3>
-<table class="ontdoctable"> 
-<tr><td class="rowheader">Superclasses </td><td> glmo:Education</td></tr> 
-<tr><td class="rowheader">Subclasses </td><td> </td></tr> 
-<tr><td class="rowheader">In domain of: </td><td>  <a href="#needsSkill">dbpedia:hasPart</a>,  <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
-<tr><td class="rowheader">In range of: </td><td>  <a href="#hasCapability">dbpedia:conformsTo</a></td></tr> 
-<tr><td>Description </td><td> This class represents Continuing Vocational Education. </td></tr> 
 </table>
 
 <a name="ISCO">
@@ -221,7 +151,7 @@ table.rdf td:first-child {
 <a name="Skill">
 <h3>glmo:Skill</h3>
 <table class="ontdoctable"> 
-<tr><td class="rowheader">Superclasses </td><td> skos:Concept; glmo:Education</td></tr> 
+<tr><td class="rowheader">Superclasses </td><td> skos:Concept</td></tr> 
 <tr><td class="rowheader">Subclasses </td><td> <a href="#BASkill">glmo:BASkill</a></td></tr> 
 <tr><td class="rowheader">In domain of: </td><td>  <a href="#requiresQualification">esco:isEssentialSkillForl</a>,  <a href="#requiresQualification">esco:isOptionalSKillFor</a> </td></tr> 
 <tr><td class="rowheader">In range of: </td><td>   <a href="#requiresQualification">esco:hasEssentialSkill</a>,  <a href="#requiresQualification">esco:hasOptionalSkill</a></td></tr> 
