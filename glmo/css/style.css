@@ -1,0 +1,152 @@
+body {
+  font-family: sans-serif;
+  color: black;
+  background-color: #f1fcff;
+  padding: 2em 1em 2em 70px;
+  line-height: 1.5;
+  max-width: 1200px;
+}
+
+h2 {
+  color: #005A9C;
+}
+
+a {
+  color: #005A9C;
+}
+
+div.rdf {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: monospace;
+}
+
+.caption {
+  font-weight: bold;
+}
+
+dt {
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+dd {
+  margin-bottom: 0.15em;
+}
+
+table.rdf {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+table.rdf caption.rdf {
+  font-size: 1.5ex;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 10px;
+}
+
+table.rdf td:first-child {
+  font-family: monospace;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 60%;
+}
+
+/* Collapsible sections */
+details.section {
+  border-top: 1px solid #999;
+  padding: 0.8em 0 0.9em 0;
+}
+
+details.section:last-of-type {
+  border-bottom: 1px solid #999;
+}
+
+details.section > summary {
+  cursor: pointer;
+  color: #005A9C;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0.2em 0;
+}
+
+details.section > summary:hover {
+  text-decoration: underline;
+}
+
+.section-content {
+  padding: 0.4em 1.5em 0.5em 1.5em;
+}
+
+.download {
+  font-weight: bold;
+  margin: 1em 0 1.5em 0;
+}
+
+.metadata code {
+  font-family: monospace;
+}
+
+ul.modules li,
+ul.release-notes li,
+ul.acknowledgements li {
+  margin-bottom: 0.35em;
+}
+
+.publication {
+  margin-bottom: 1.2em;
+}
+
+.schema-placeholder {
+  border: 1px dashed #777;
+  padding: 2em;
+  text-align: center;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.load-error {
+  color: #8b0000;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 1.2em;
+  }
+
+  .section-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+
+.concept {
+    margin: 0.5em 0;
+}
+
+.concept summary {
+    cursor: pointer;
+    color: #005A9C;
+    font-weight: bold;
+}
+
+.ontdoctable {
+    margin: 0.75em 0 1em 1em;
+    border-collapse: collapse;
+    font-size: 1.5ex;
+}
+
+.ontdoctable td {
+    padding: 0.3em 1em 0.3em 0;
+    vertical-align: top;
+}
+
+.ontdoctable .rowheader {
+    font-weight: bold;
+    white-space: nowrap;
+}

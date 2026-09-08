@@ -1,0 +1,372 @@
+<img src="img/glmo_schema.png" alt="Schema of the German Labor Market Ontology" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+
+<p>
+The following classes represent the main concepts used in GLMO.
+They are organised hierarchically through superclass and subclass relations.
+</p>
+
+<details class="concept">
+    <summary><code>skos:Concept</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td>&ndash;</td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                <code>tool:Tool</code>,
+                <code>glmo:Qualification</code>,
+                <code>glmo:Skill</code>,
+                <code>glmo:Occupation</code>,
+                <code>glmo:IndustrialSector</code>
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td></td>
+        </tr>
+    </table>
+</details>
+
+<details class="concept">
+    <summary><code>glmo:Qualification</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>skos:Concept</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                <code>glmo:Education</code>
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents a qualification.</td>
+        </tr>
+    </table>
+</details>
+
+<details class="concept">
+    <summary><code>glmo:Education</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>glmo:Qualification</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                <code>glmo:ContinuingVocationalEducation</code>,
+                <code>glmo:GeneralEducation</code>,
+                <code>glmo:Skill</code>,
+                <code>glmo:ContinuingEducation</code>,
+                <code>glmo:Apprenticeship</code>
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents education.</td>
+        </tr>
+    </table>
+</details>
+<details class="concept">
+    <summary><code>glmo:Apprenticeship</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>glmo:Education</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                &ndash;
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents an apprenticeship.</td>
+        </tr>
+    </table>
+</details>
+<details class="concept">
+    <summary><code>glmo:ContinuingEducation</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>glmo:Education</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                &ndash;
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents continuing education.</td>
+        </tr>
+    </table>
+</details>
+<details class="concept">
+    <summary><code>glmo:ContinuingVocationalEducation</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>glmo:Education</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                &ndash;
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents continuing vocational education.</td>
+        </tr>
+    </table>
+</details>
+
+<details class="concept">
+    <summary><code>glmo:GeneralEducation</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>glmo:Education</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                &ndash;
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents general education.</td>
+        </tr>
+    </table>
+</details>
+
+<details class="concept">
+    <summary><code>glmo:Skill</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>glmo:Education</code>,
+                <code>skos:Concept</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                <code>baskill:BASkill</code>
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents a skill.</td>
+        </tr>
+    </table>
+</details>
+<details class="concept">
+    <summary><code>baskill:BASkill</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>glmo:Skill</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                &ndash;
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents a skill from the BA dataset.</td>
+        </tr>
+    </table>
+</details>
+
+
+<details class="concept">
+    <summary><code>glmo:Occupation</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>skos:Concept</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                <code>gdr:GDR</code>,
+                <code>kldb:KLDB</code>,
+                <code>kldb1988:KLDB1988</code>,
+                <code>kldb1992:KLDB1992</code>,
+                <code>isco:ISCO1988</code>,
+                <code>isco:ISCO</code>
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents an occupation.</td>
+        </tr>
+    </table>
+</details>
+<details class="concept">
+    <summary><code>isco:ISCO</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>glmo:Occupation</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                &ndash;
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents an ISCO occupation.</td>
+        </tr>
+    </table>
+</details>
+<details class="concept">
+    <summary><code>isco:ISCO1988</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>glmo:Occupation</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                &ndash;
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents a historical ISCO 1988 occupation.</td>
+        </tr>
+    </table>
+</details>
+<details class="concept">
+    <summary><code>kldb:KLDB</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>glmo:Occupation</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                &ndash;
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents an occupation according to KldB 2010.</td>
+        </tr>
+    </table>
+</details>
+<details class="concept">
+    <summary><code>kldb1988:KLDB1988</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>glmo:Occupation</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                &ndash;
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents a historical occupation according to KldB 1988.</td>
+        </tr>
+    </table>
+</details>
+<details class="concept">
+    <summary><code>kldb1992:KLDB1992</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>glmo:Occupation</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                &ndash;
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents a historical occupation according to KldB 1992.</td>
+        </tr>
+    </table>
+</details>
+<details class="concept">
+    <summary><code>gdr:GDR</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>glmo:Occupation</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                &ndash;
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents a historical GDR occupation.</td>
+        </tr>
+    </table>
+</details>
+
+<details class="concept">
+    <summary><code>tool:Tool</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>skos:Concept</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                &ndash;
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents a tool or item of working equipment.</td>
+        </tr>
+    </table>
+</details>
+
+
+<details class="concept">
+    <summary><code>glmo:IndustrialSector</code></summary>
+    <table class="ontdoctable">
+        <tr>
+            <td class="rowheader">Superclass</td>
+            <td><code>skos:Concept</code></td>
+        </tr>
+        <tr>
+            <td class="rowheader">Subclasses</td>
+            <td>
+                &ndash;
+            </td>
+        </tr>
+        <tr>
+            <td class="rowheader">Description</td>
+            <td>Represents an industrial sector according to WZ08.</td>
+        </tr>
+    </table>
+</details>
